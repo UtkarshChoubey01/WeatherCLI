@@ -1,29 +1,31 @@
+Here you go! 📄
+Just **copy-paste** the entire block below into a new file named **`README.md`** in your project root:
+
+```markdown
 # 🌦️ WeatherCLI
 
-A simple Java command-line application to fetch and display the current weather of any city using the OpenWeatherMap API.
+A simple Java CLI tool to fetch:
+- Current weather
+- Coordinates (latitude & longitude)
+- Local time
+
+using OpenWeatherMap and TimezoneDB APIs.
 
 ---
 
 ## 🚀 Features
-- Takes a city name as a command-line argument
-- Connects to OpenWeatherMap REST API using Java 11 HTTP Client
-- Parses JSON response and displays:
-  - Current temperature (°C)
-  - Weather description
-- Lightweight, fast, and works directly from terminal
-
----
-
-## 🛠 Built With
-- **Java 11+**
-- **java.net.http** (built-in HTTP client)
-- **org.json** library for JSON parsing
-- Simple CLI architecture
+✅ Takes city name as CLI argument  
+✅ Fetches weather data (temperature, description)  
+✅ Fetches coordinates from same weather response  
+✅ Gets local time using TimezoneDB  
+✅ Handles HTTP errors gracefully  
+✅ Uses environment variables for API keys (secure)
 
 ---
 
 ## 🏗 Project Structure
 ```
+
 WeatherCLI/
 ├── src/
 │   └── weathercli/
@@ -31,60 +33,69 @@ WeatherCLI/
 ├── lib/
 │   └── json-20210307.jar
 └── README.md
+
+````
+
+---
+
+## ⚙️ How to Build
+**In Eclipse:**
+1. Add `json-20210307.jar` to classpath.
+2. `File → Export → Java → Runnable JAR file`
+3. Choose launch config (`WeatherCLI`).
+4. Library handling: ✅ *Package required libraries into generated JAR*
+5. Export as `WeatherCLI.jar`.
+
+---
+
+## 🧪 How to Run
+Set environment variables with your API keys and run:
+
+**Windows CMD:**
+```cmd
+set OPENWEATHER_API_KEY=your_key
+set TIMEZONEDB_API_KEY=your_key
+java -jar WeatherCLI.jar Mumbai
+````
+
+**Linux/macOS:**
+
+```bash
+export OPENWEATHER_API_KEY=your_key
+export TIMEZONEDB_API_KEY=your_key
+java -jar WeatherCLI.jar Mumbai
 ```
 
 ---
 
-## ⚙️ How it works
-- User runs the program and passes the city name as an argument:
-  ```
-  java -jar WeatherCLI.jar Mumbai
-  ```
-- App sends HTTP request to:
-  ```
-  http://api.openweathermap.org/data/2.5/weather?q=<city>&appid=<API_KEY>&units=metric
-  ```
-- Parses JSON response to extract temperature and weather description
-- Prints result to console
-
----
-
-## ✏️ Usage
-1. Clone/download this repository.
-2. Add your **OpenWeatherMap API key** in `WeatherCLI.java`:
-   ```java
-   String apiKey = "YOUR_API_KEY_HERE";
-   ```
-3. Build the runnable jar (in Eclipse: `Export → Runnable JAR`).
-4. Open terminal in the jar’s folder and run:
-   ```
-   java -jar WeatherCLI.jar <city>
-   ```
-   Example:
-   ```
-   java -jar WeatherCLI.jar London
-   ```
-
----
-
 ## 🧠 Concepts Practiced
-- Java CLI application with `main(String[] args)`
-- Using Java 11 `HttpClient`
-- JSON parsing with `org.json`
-- Separation of concerns: CLI input, HTTP request, data parsing
-- Exporting runnable JAR and running from terminal
 
----
-
-## 🛆 Dependencies
-- [`json-20210307.jar`](https://repo1.maven.org/maven2/org/json/json/20210307/json-20210307.jar)
+* Java 11 `HttpClient` & `HttpRequest`
+* JSON parsing with `org.json`
+* CLI input via `args`
+* Environment variables
+* Error handling and refactoring
 
 ---
 
 ## 📔 License
-This project is open source and free to use for educational purposes.
+
+Open source & free to use for learning.
 
 ---
 
-✅ **Feel free to improve, fork, or suggest changes!**
+✅ **Contributions welcome!**
 
+````
+
+---
+
+✅ Once saved, you can do:
+```bash
+git add README.md
+git commit -m "Add README.md"
+git push origin main
+````
+
+If you'd like, I can draft the commit message & commands for you too.
+Just say so! 🚀
