@@ -13,12 +13,12 @@ public class WeatherCLI {
 		
 		    String apiKey = "0fec47748a3ca95c61d26325ecfbed69";
 
-		    if (args.length < 1) {
+		   /* if (args.length < 1) {
 		        System.out.println("Usage: java WeatherCLI <city>");
 		        return;
-		    }
+		    }*/
 
-		    String city = args[0];
+		    String city = "London";//args[0];
 		    //String apiKey = "YOUR_API_KEY_HERE";
 
 		    try {
